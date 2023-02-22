@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.java.mapper.BoardMapper">
+  <select id="selectBoardList" resultType="com.java.vo.BoardVo"> <!-- id = 메소드명, resultType = 결과물을 받는형식 --> 
+    select * from board
+  </select>
+  
+  <select id="selectCount" resultType="int">
+	select count(*) count from board  	
+  </select>
+  
+  <select id="selectOne" resultType="com.java.vo.BoardVo"> <!-- #{} 는 받은 매개변수사용 -->
+  	select * from board where bno = #{bno}
+  </select>
+</mapper>
