@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>		<!-- annotation 설정형태 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd 
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+       
+<context:property-placeholder location="sp0214/text.properties"/>  <!-- 프로그램 실행되면 text.properties 읽어와라 라는 뜻 -->
+<!-- <context:annotation-config/> -->
+<context:component-scan base-package="sp0214"/>
+<!-- 이렇게하고 BMICalculator 클래스에 @Configuration만 붙여주면 
+      app_config.xml안의 내용들을(<bean>들) 자동으로 다 해줌. 내가 직접 쓸 필요 없어. -->
+       
+</beans>
+
+
+
