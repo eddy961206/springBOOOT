@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!-- Calulator calculator = new Calculator(); 과 같은. 객체 선언.  --> 
+<bean id="calculator" class="com.java.www.Calculator" />
+
+<!-- MyCal myCal = new MyCal(); -->
+<bean id="myCal" class="com.java.www.MyCal">
+	<property name="calculator">	<!-- myCal.setCalculator(calculator); -->
+		<ref bean="calculator" /> <!-- 여기서 calculator는 8번째줄의 calculator. -->
+	</property>
+	<property name="firstNum" value="10" /> <!-- myCal.setFirstNum(10) -->
+	<property name="secondNum" value="2" />		<!-- myCal.setSecondNum(2) -->
+
+</bean>
+
+
+
+</beans>
